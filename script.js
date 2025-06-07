@@ -734,7 +734,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     this.style.color = '';
                 }, 2000);
                 
-                console.log('Phone number copied to clipboard');
                 
             } catch (err) {
                 // Fallback for older browsers
@@ -760,7 +759,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 showCopySuccess(element);
             }
         } catch (err) {
-            console.error('Fallback: Could not copy text');
             showCopyError(element);
         }
         
@@ -812,7 +810,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.style.transform = 'scale(1)';
             }, 150);
             
-            console.log('Email client opened');
         });
     }
 });
