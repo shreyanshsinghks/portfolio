@@ -1858,3 +1858,180 @@ a.contact-card:active {
 .project-btn.simple i {
     font-size: 1.1rem;
 }
+
+
+/* ---- PERFECT HERO SPACING FIX ---- */
+
+.hero {
+    margin-top: 80px !important; /* Match navbar height exactly */
+    padding-top: 0 !important;
+}
+
+.hero-content {
+    padding-top: 0 !important; /* Remove extra padding */
+}
+
+.hero-badge {
+    margin-top: 0.5rem !important; /* Minimal space above badge */
+    margin-bottom: 1.5rem !important; /* Space below badge */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .hero {
+        margin-top: 80px !important; /* Keep consistent */
+    }
+    
+    .hero-badge {
+        margin-top: 0.3rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 70px !important; /* Slightly less for mobile */
+    }
+    
+    .hero-badge {
+        margin-top: 0.2rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* ---- FORCE BIG SCREEN SPACING FIX ---- */
+
+.hero {
+    margin-top: 65px !important;
+    padding-top: 0 !important;
+}
+
+.hero-badge {
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+/* Keep laptop screens as they are */
+@media (max-width: 1399px) {
+    .hero {
+        margin-top: 80px !important;
+    }
+    
+    .hero-badge {
+        margin-top: 0.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+/* ---- CUSTOM SPACING FOR YOUR SCREEN SIZES ---- */
+
+/* Big Screen: 1905 × 963 and similar large displays */
+@media (min-width: 1800px) {
+    .hero {
+        margin-top: 10px !important; /* Small positive value */
+        padding-top: 0 !important;
+    }
+    
+    .hero-badge {
+        margin-top: 0rem !important; /* Remove margin entirely */
+        margin-bottom: 0.3rem !important;
+    }
+}
+
+
+/* Small Screen: 1585 × 884 and similar laptop displays */
+@media (max-width: 1799px) and (min-width: 1400px) {
+    .hero {
+        margin-top: 40px !important;
+        padding-top: 0 !important;
+    }
+    
+    .hero-badge {
+        margin-top: 0.3rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Very small screens (tablets/mobile) - keep existing spacing */
+@media (max-width: 1399px) {
+    .hero {
+        margin-top: 80px !important;
+        padding-top: 0 !important;
+    }
+    
+    .hero-badge {
+        margin-top: 0.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+
+/* ---- FIX 125% ZOOM OVERLAP ISSUE ---- */
+
+/* Target the problematic zoom range (around 125% zoom) */
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .hero {
+        margin-top: 85px !important; /* Slightly more margin for zoom safety */
+        padding-top: 0 !important;
+    }
+    
+    .hero-badge {
+        margin-top: 0.2rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Ensure navbar has proper z-index and positioning */
+.navbar {
+    z-index: 1000 !important;
+    position: fixed !important;
+    width: 100% !important;
+}
+
+/* Add a safety buffer for browser zoom calculations */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Toast notification animations */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Ensure toast appears above everything */
+.toast-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: #22c55e;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

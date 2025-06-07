@@ -675,76 +675,86 @@ function throttle(func, limit) {
 // ===========================
 
 // Wait for page to load
-window.addEventListener('load', function() {
-    
+window.addEventListener('load', function () {
+
     // Handle CV Download Button
     const cvBtn = document.querySelector('.hero-actions .btn-secondary');
     if (cvBtn) {
-        cvBtn.onclick = function(e) {
+        cvBtn.onclick = function (e) {
             e.preventDefault();
             window.open('https://drive.google.com/file/d/1tqcIx2ix98l0FjI-IlrdNxXkqo01lmR2/view?usp=sharing', '_blank');
         };
     }
-    
+
     // Handle View Projects Button  
     const projectBtn = document.querySelector('.hero-actions .btn-primary');
     if (projectBtn) {
-        projectBtn.onclick = function(e) {
+        projectBtn.onclick = function (e) {
             e.preventDefault();
             document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
         };
     }
-    
+
 });
 
 // ===========================
 // PHONE NUMBER COPY FUNCTIONALITY
 // ===========================
 
-document.addEventListener('DOMContentLoaded', function() {
-    
+document.addEventListener('DOMContentLoaded', function () {
+
     // Phone number copy functionality
+    // Elegant phone copy with toast notification
     const phoneCopyElement = document.querySelector('.phone-copy');
-    
+
     if (phoneCopyElement) {
-        phoneCopyElement.addEventListener('click', async function() {
+        phoneCopyElement.addEventListener('click', async function () {
             const phoneNumber = this.getAttribute('data-phone');
-            
+
             try {
-                // Modern clipboard API
                 await navigator.clipboard.writeText(phoneNumber);
-                
-                // Visual feedback
-                const originalContent = this.innerHTML;
-                this.innerHTML = `
-                    <i class="fas fa-check"></i>
-                    <span>Copied!</span>
-                `;
-                
-                // Add success animation
-                this.style.background = 'rgba(34, 197, 94, 0.2)';
-                this.style.borderColor = '#22c55e';
-                this.style.color = '#22c55e';
-                
-                // Reset after 2 seconds
+
+                // Create toast notification
+                const toast = document.createElement('div');
+                toast.innerHTML = '<i class="fas fa-check"></i> Phone number copied!';
+                toast.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: #22c55e;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 500;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                animation: slideInRight 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            `;
+
+                document.body.appendChild(toast);
+
+                // Remove toast after 2 seconds
                 setTimeout(() => {
-                    this.innerHTML = originalContent;
-                    this.style.background = '';
-                    this.style.borderColor = '';
-                    this.style.color = '';
+                    toast.style.animation = 'slideOutRight 0.3s ease';
+                    setTimeout(() => {
+                        if (document.body.contains(toast)) {
+                            document.body.removeChild(toast);
+                        }
+                    }, 300);
                 }, 2000);
-                
-                
+
             } catch (err) {
-                // Fallback for older browsers
-                fallbackCopyTextToClipboard(phoneNumber, this);
+                // Fallback for older browsers or errors
+                alert('Phone number copied: ' + phoneNumber);
             }
         });
-        
-        // Add cursor pointer style
-        phoneCopyElement.style.cursor = 'pointer';
     }
-    
+
+
     // Fallback copy function for older browsers
     function fallbackCopyTextToClipboard(text, element) {
         const textArea = document.createElement("textarea");
@@ -752,7 +762,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(textArea);
         textArea.focus();
         textArea.select();
-        
+
         try {
             const successful = document.execCommand('copy');
             if (successful) {
@@ -761,10 +771,10 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (err) {
             showCopyError(element);
         }
-        
+
         document.body.removeChild(textArea);
     }
-    
+
     function showCopySuccess(element) {
         const originalContent = element.innerHTML;
         element.innerHTML = `
@@ -772,13 +782,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <span>Copied!</span>
         `;
         element.style.color = '#22c55e';
-        
+
         setTimeout(() => {
             element.innerHTML = originalContent;
             element.style.color = '';
         }, 2000);
     }
-    
+
     function showCopyError(element) {
         const originalContent = element.innerHTML;
         element.innerHTML = `
@@ -786,7 +796,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <span>Copy failed</span>
         `;
         element.style.color = '#ef4444';
-        
+
         setTimeout(() => {
             element.innerHTML = originalContent;
             element.style.color = '';
@@ -799,17 +809,17 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===========================
 
 // Enhanced email link functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const emailLink = document.querySelector('a[href^="mailto:"]');
-    
+
     if (emailLink) {
-        emailLink.addEventListener('click', function(e) {
+        emailLink.addEventListener('click', function (e) {
             // Add visual feedback
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
                 this.style.transform = 'scale(1)';
             }, 150);
-            
+
         });
     }
 });
