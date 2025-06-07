@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyansh Singh - Elite Android Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="terminal-loader">
+                <div class="loader-text">INITIALIZING_PORTFOLIO</div>
+                <div class="loader-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <span class="brand-text">SHREYANSH</span>
+                <span class="brand-accent">.</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <span class="link-text">HOME</span>
+                    <span class="link-bg"></span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <span class="link-text">ABOUT</span>
+                    <span class="link-bg"></span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <span class="link-text">PROJECTS</span>
+                    <span class="link-bg"></span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <span class="link-text">CONTACT</span>
+                    <span class="link-bg"></span>
+                </a>
+            </div>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="grid-pattern"></div>
+            <div class="floating-elements">
+                <div class="element element-1"></div>
+                <div class="element element-2"></div>
+                <div class="element element-3"></div>
+            </div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">⚡</span>
+                    <span class="badge-text">ANDROID DEVELOPER</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-line">
+                        <span class="title-word" data-word="SHREYANSH">SHREYANSH</span>
+                    </span>
+                    <span class="title-line">
+                        <span class="title-word" data-word="SINGH">SINGH</span>
+                    </span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Transforming Ideas Into <span class="highlight">Impactful Software</span>
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">8.10</div>
+                        <div class="stat-label">CGPA</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">PROJECTS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2×</div>
+                        <div class="stat-label">RUNNER-UP</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1K+</div>
+                        <div class="stat-label">HELPED</div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-text">VIEW PROJECTS</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <button class="btn btn-secondary">
+                        <span class="btn-text">DOWNLOAD CV</span>
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+
+                <div class="hero-contact">
+                    <!-- Email Link - Opens Gmail -->
+                    <!-- Gmail Direct Link -->
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shreyanshsinghks@gmail.com" target="_blank"
+                        class="contact-item" title="Send Email via Gmail">
+                        <i class="fas fa-envelope"></i>
+                        <span>shreyanshsinghks@gmail.com</span>
+                    </a>
+
+
+                    <!-- Phone Link - Copies to Clipboard -->
+                    <div class="contact-item phone-copy" title="Click to Copy Phone Number" data-phone="+918957210477">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 8957210477</span>
+                    </div>
+
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/shreyanshsinghks" target="_blank" class="contact-item"
+                        title="View GitHub Profile">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/shreyanshsinghks</span>
+                    </a>
+
+                    <!-- LinkedIn Link -->
+                    <a href="https://www.linkedin.com/in/shreyanshsinghks/" target="_blank" class="contact-item"
+                        title="Connect on LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/shreyanshsinghks</span>
+                    </a>
+                </div>
+
+
+
+            </div>
+
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <div class="profile-frame">
+                        <div class="profile-img">
+                            <img src="https://avatars.githubusercontent.com/u/120413995?v=4" alt="Shreyansh Singh">
+                        </div>
+
+
+                        <div class="profile-ring"></div>
+                        <div class="profile-glow"></div>
+                    </div>
+
+                    <div class="tech-badges">
+                        <div class="tech-badge" style="--delay: 0s">
+                            <span>KOTLIN</span>
+                        </div>
+                        <div class="tech-badge" style="--delay: 0.2s">
+                            <span>COMPOSE</span>
+                        </div>
+                        <div class="tech-badge" style="--delay: 0.4s">
+                            <span>FIREBASE</span>
+                        </div>
+                        <div class="tech-badge" style="--delay: 0.6s">
+                            <span>MVVM</span>
+                        </div>
+                        <div class="tech-badge" style="--delay: 0.8s">
+                            <span>ROOMDB</span>
+                        </div>
+                        <div class="tech-badge" style="--delay: 1s">
+                            <span>RETROFIT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">SCROLL</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">ABOUT ME</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="text-block">
+                        <h3>Developer Profile</h3>
+                        <p>Aspiring software developer with expertise in Android development, striving to build
+                            efficient, user-friendly applications and contribute to impactful projects that push the
+                            boundaries of mobile technology.</p>
+                    </div>
+
+                    <div class="education-timeline">
+                        <h3>Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item active">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2022 - 2026</div>
+                                    <h4>B.E. Computer Science</h4>
+                                    <p>Chandigarh University</p>
+                                    <div class="grade">CGPA: 8.10</div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2021</div>
+                                    <h4>Intermediate (12th)</h4>
+                                    <p>Lucknow Public School</p>
+                                    <div class="grade">91.6%</div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2019</div>
+                                    <h4>High School (10th)</h4>
+                                    <p>Saint Anthony</p>
+                                    <div class="grade">91%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <div class="skills-header">
+                        <h3>Technical Skills</h3>
+                    </div>
+
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Languages</h4>
+                            <div class="skill-list">
+                                <div class="skill-item">
+                                    <span class="skill-name">Kotlin</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 90%"></div>
+                                    </div>
+                                    <span class="skill-level">90%</span>
+                                </div>
+
+                                <div class="skill-item">
+                                    <span class="skill-name">Java</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 85%"></div>
+                                    </div>
+                                    <span class="skill-level">85%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Frameworks & Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Jetpack Compose</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">RoomDB</span>
+                                <span class="tech-tag">Retrofit</span>
+                                <span class="tech-tag">MVVM</span>
+                                <span class="tech-tag">Clean Architecture</span>
+                                <span class="tech-tag">Dagger Hilt</span>
+                                <span class="tech-tag">Git/GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievements">
+                        <h4>Achievements</h4>
+                        <div class="achievement-list">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">🏆</div>
+                                <div class="achievement-text">
+                                    <h5>Cipher Thon 2.0 Hackathon</h5>
+                                    <span>Runner-Up (2024)</span>
+                                </div>
+                            </div>
+
+                            <div class="achievement-item">
+                                <div class="achievement-icon">🏆</div>
+                                <div class="achievement-text">
+                                    <h5>Thapar MLSC Hackathon</h5>
+                                    <span>Runner-Up (2024)</span>
+                                </div>
+                            </div>
+
+                            <div class="achievement-item">
+                                <div class="achievement-icon">👥</div>
+                                <div class="achievement-text">
+                                    <h5>Tech Path Finder Club</h5>
+                                    <span>President</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">FEATURED PROJECTS</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- News App Project -->
+                <div class="project-card" data-project="news-app">
+                    <div class="project-image">
+                        <img src="https://a.storyblok.com/f/47007/1201x628/6142f06af0/how-to-build-a-news-app.png"
+                            alt="Modern News Application Interface" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/shreyanshsinghks/NewsAppWithCaching" target="_blank"
+                                    class="project-btn simple">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Modern News Application</h3>
+                            <span class="project-status featured">FEATURED</span>
+                        </div>
+
+                        <p class="project-description">
+                            Advanced news aggregation platform with offline reading capabilities and intelligent
+                            bookmarking system with modern UI design.
+                        </p>
+
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">500+</span>
+                                <span class="metric-label">Bookmarks</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">25%</span>
+                                <span class="metric-label">Better UX</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-item">Jetpack Compose</span>
+                            <span class="tech-item">RoomDB</span>
+                            <span class="tech-item">MVVM</span>
+                            <span class="tech-item">Kotlin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Finder Project -->
+                <div class="project-card" data-project="faculty-finder">
+                    <div class="project-image">
+                        <img src="https://academia.asia/wp-content/uploads/2023/05/Chandigarh-in-Kerala.jpg"
+                            alt="Faculty Finder Platform Interface" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/shreyanshsinghks" target="_blank"
+                                    class="project-btn simple">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Faculty Finder Platform</h3>
+                            <span class="project-status popular">POPULAR</span>
+                        </div>
+
+                        <p class="project-description">
+                            Streamlined teacher-student matching system with advanced search algorithms and real-time
+                            connections for academic excellence.
+                        </p>
+
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">1000+</span>
+                                <span class="metric-label">Students</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">50%</span>
+                                <span class="metric-label">Faster</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-item">Clean Architecture</span>
+                            <span class="tech-item">Retrofit</span>
+                            <span class="tech-item">MVVM</span>
+                            <span class="tech-item">Compose</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact App Project -->
+                <div class="project-card" data-project="contact-app">
+                    <div class="project-image">
+                        <img src="https://www.gizmochina.com/wp-content/uploads/2020/04/Google-Phone-App-980x539.jpg"
+                            alt="Contact Management System Interface" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/shreyanshsinghks/ContactAppJetpack" target="_blank"
+                                    class="project-btn simple">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Contact Management System</h3>
+                            <span class="project-status latest">LATEST</span>
+                        </div>
+
+                        <p class="project-description">
+                            Advanced contact organization tool with secure storage, intelligent search, and Material
+                            Design compliance for seamless user experience.
+                        </p>
+
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">100%</span>
+                                <span class="metric-label">Material</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">FAST</span>
+                                <span class="metric-label">Performance</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-item">Dagger Hilt</span>
+                            <span class="tech-item">RoomDB</span>
+                            <span class="tech-item">Material UI</span>
+                            <span class="tech-item">Kotlin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">GET IN TOUCH</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <a href="mailto:shreyanshsinghks@gmail.com" class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Email</h4>
+                            <p>shreyanshsinghks@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/shreyanshsinghks/" target="_blank" class="contact-card">
+                        <div class="card-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>LinkedIn</h4>
+                            <p>shreyanshsinghks</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/shreyanshsinghks" target="_blank" class="contact-card">
+                        <div class="card-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>GitHub</h4>
+                            <p>shreyanshsinghks</p>
+                        </div>
+                    </a>
+
+                    <div class="contact-card phone-copy" data-phone="+918957210477" title="Click to copy phone number">
+                        <div class="card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Phone</h4>
+                            <p>+91 8957210477</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-text">SEND MESSAGE</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Shreyansh Singh. Designed & Developed with precision.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/shreyanshsinghks" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shreyanshsinghks/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/shreyansh4020" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
